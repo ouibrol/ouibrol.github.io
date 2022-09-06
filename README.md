@@ -1,3 +1,3 @@
 # Password generator
-test repo
-(javascript)
+Test repo
+Password generator in javascript
