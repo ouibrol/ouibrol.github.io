@@ -12,20 +12,54 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <!-- My Stuff -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="password.css" rel="stylesheet">
+    <script src="password.js"></script>
 
-    <title>Index</title>
+    <title>Password</title>
 </head>
 
 <body>
-    <h1 class="display-5">Index</h1>
-    <p>hi</p>
+    <header>
+        <h1 class="display-5">Password generator</h1>
+    </header>
 
-    <ul>
-        <li><a class="nav-link" href="password.html">Password</a></li>
-        <li><a class="nav-link" href="password.html">Password</a></li>
-        <li><a class="nav-link" href="password.html">Password</a></li>
-    </ul>
+
+    <form>
+        <output id="pwd-out" class="form-control-lg"></output>
+
+        <fieldset>
+            <legend>Length</legend>
+            <div class="flex-container">
+                <label for="len-box" class="form-label">Length</label>
+                <input id="len-box" class="form-control" type="number" min="4" max="30" value="16">
+                <label for="len-bar" class="form-label">Length</label>
+                <input id="len-bar" class="form-range" type="range" min="4" max="30" value="16">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Characters</legend>
+            <div class="form-check form-switch">
+                <input type="checkbox" role="switch" class="form-check-input" id="uppercase" checked>
+                <label class="form-check-label" for="uppercase">Lowercase</label>
+            </div>
+            <div class="form-check form-switch">
+                <input type="checkbox" role="switch" class="form-check-input" id="lowercase" checked>
+                <label class="form-check-label" for="lowercase">Uppercase</label>
+            </div>
+            <div class="form-check form-switch">
+                <input type="checkbox" role="switch" class="form-check-input" id="digits" checked>
+                <label class="form-check-label" for="digits">Digits</label>
+            </div>
+        </fieldset>
+
+        <div id="pwd-buttons" class="flex-container">
+            <button type="submit" class="btn btn-outline-primary">Generate</button>
+            <button type="button" class="btn btn-outline-primary" id="copy">Copy</button>
+        </div>
+    </form>
+
+    <div id="alertPlaceholder"></div>
 </body>
 
 </html>
